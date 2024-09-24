@@ -41,7 +41,7 @@ test = [
   "sybil != 7.1.0",
 ]
 dev = [
-  "plotting_backends[all]",
+  "plotting_backends[test]",
 ]
 
 [project.urls]
