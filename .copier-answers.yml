@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2024.08.19
+_src_path: gh:scientific-python/cookie
+backend: hatch
+email: nstarkman@users.noreply.github.com
+full_name: galax maintainers
+license: MIT
+org: GalacticDynamics
+project_name: plotting_backends
+project_short_description: Plotting dispatch backends
+url: https://github.com/GalacticDynamics/plotting_backends
+vcs: true
