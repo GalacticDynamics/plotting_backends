@@ -1,5 +1,5 @@
 <h1 align='center'> plotting_backends </h1>
-<h3 align="center">Plotting dispatch backends</h3>
+<h3 align="center"> plotting dispatch backends </h3>
 
 ## Installation
 
@@ -10,24 +10,48 @@
 pip install plotting_backends
 ```
 
-## Documentation
+## Examples
 
-### Getting Started
+### `functools.singledispatch`
+
+This shows how to use `plotting_backends` with `functools.singledispatch`.
 
 ```python
 import plotting_backends
-import plum
+from functools import singledispatch
+
+
+@singledispatch
+def plotting_func(
+    backend: type[plotting_backends.AbstractPlottingBackend], x: Any, y: Any
+) -> None: ...
+
+
+@plotting_func.register
+def matplotlib(
+    backend: type[plotting_backends.MatplotlibBackend], x: Any, y: Any
+) -> None: ...
+```
+
+### `plum` (multiple dispatch)
+
+This example shows how to use `plotting_backends` in conjunction with `plum`, a
+multiple dispatch library.
+
+```python
+import plotting_backends
+from plum import dispatch
 
 
 @dispatch.abstract
 def plotting_func(
-    backend: plotting_backends.AbstractPlottingBackend, x: Any, y: Any
+    backend: type[plotting_backends.AbstractPlottingBackend], x: Any, y: Any
 ) -> None: ...
 
 
 @dispatch
 def plotting_func(
-    backend: plotting_backends.MatplotlibBackend, x: Any, y: Any
+    backend: type[plotting_backends.MatplotlibBackend], x: Any, y: Any
 ) -> None: ...
 ```
 
