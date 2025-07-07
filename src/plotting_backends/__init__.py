@@ -7,6 +7,7 @@ __all__ = [
     "AbstractPlottingBackend",
     "AltairBackend",
     "BokehBackend",
+    "GGPlotBackend",
     "MatplotlibBackend",
 ]
 
@@ -32,3 +33,8 @@ class BokehBackend(AbstractPlottingBackend):
 @final
 class AltairBackend(AbstractPlottingBackend):
     """Altair plotting backend."""
+
+
+@final
+class GGPlotBackend(AbstractPlottingBackend):
+    """GGPlot plotting backend."""
