@@ -54,10 +54,6 @@ Changelog = "https://github.com/GalacticDynamics/plotting_backends/releases"
 version.source = "vcs"
 build.hooks.vcs.version-file = "src/plotting_backends/_version.py"
 
-[tool.hatch.envs.default]
-features = ["test"]
-scripts.test = "pytest {args}"
-
 
 [tool.pytest.ini_options]
 minversion = "8.0"
