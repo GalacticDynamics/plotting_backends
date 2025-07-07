@@ -9,6 +9,7 @@ __all__ = [
     "BokehBackend",
     "GGPlotBackend",
     "MatplotlibBackend",
+    "PlotlyBackend",
 ]
 
 from typing import final
@@ -23,6 +24,11 @@ class AbstractPlottingBackend:
 @final
 class MatplotlibBackend(AbstractPlottingBackend):
     """Matplotlib plotting backend."""
+
+
+@final
+class PlotlyBackend(AbstractPlottingBackend):
+    """Plotly plotting backend."""
 
 
 @final
