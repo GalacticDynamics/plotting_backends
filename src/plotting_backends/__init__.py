@@ -6,6 +6,7 @@ plotting_backends: Plotting dispatch backends
 __all__ = [
     "AbstractPlottingBackend",
     "AltairBackend",
+    "BokehBackend",
     "MatplotlibBackend",
 ]
 
@@ -21,6 +22,11 @@ class AbstractPlottingBackend:
 @final
 class MatplotlibBackend(AbstractPlottingBackend):
     """Matplotlib plotting backend."""
+
+
+@final
+class BokehBackend(AbstractPlottingBackend):
+    """Bokeh plotting backend."""
 
 
 @final
