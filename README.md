@@ -10,9 +10,22 @@
 pip install plotting_backends
 ```
 
-## Examples
+## Documentation
 
-### `functools.singledispatch`
+The `plotting_backends` library provides a set of classes that can be used for
+dispatching plotting functions to different backends.
+
+The common base class is `AbstractPlottingBackend` and the pre-defined backends
+are:
+
+- `MatplotlibBackend`
+- `SeabornBackend`
+- `PlotlyBackend`
+- `BokehBackend`
+- `AltairBackend`
+- `GGPlotBackend`
+
+### Using with `functools.singledispatch`
 
 This shows how to use `plotting_backends` with `functools.singledispatch`.
 
@@ -33,7 +46,7 @@ def matplotlib(
 ) -> None: ...
 ```
 
-### `plum` (multiple dispatch)
+### Using with `plum` (multiple dispatch)
 
 This example shows how to use `plotting_backends` in conjunction with `plum`, a
 multiple dispatch library.
@@ -54,6 +67,8 @@ def plotting_func(
     backend: type[plotting_backends.MatplotlibBackend], x: Any, y: Any
 ) -> None: ...
 ```
+
+---
 
 ## Development
 
