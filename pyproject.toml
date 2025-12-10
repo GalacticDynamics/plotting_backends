@@ -76,6 +76,10 @@ build.hooks.vcs.version-file = "src/plotting_backends/_version.py"
 skip = ["uv.lock"]
 
 
+[tool.commitizen]
+name = "cz_gitmoji"
+
+
 [tool.coverage]
 run.source = ["plotting_backends"]
 report.exclude_also = [
@@ -85,6 +89,7 @@ report.exclude_also = [
   '\.\.\.',
   'if typing.TYPE_CHECKING:',
 ]
+
 
 [tool.mypy]
 python_version = "3.9"
