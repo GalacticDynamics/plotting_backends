@@ -1,8 +1,8 @@
+# Copyright (c) 2024 galax maintainers. All rights reserved.
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["resvg-py"]
 # ///
-# Copyright (c) 2024 galax maintainers. All rights reserved.
 """Draw the plotting_backends logo: one plotting call, three backends.
 
 A dot, the plotting call, branching to three small charts. Each shows the same
