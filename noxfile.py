@@ -1,4 +1,7 @@
-"""Nox setup."""
+"""Copyright (c) 2024 galax maintainers. All rights reserved.
+
+Nox setup.
+"""
 
 import os
 import shutil

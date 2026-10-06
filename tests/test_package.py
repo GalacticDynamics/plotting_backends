@@ -1,4 +1,7 @@
-"""Test the package itself."""
+"""Copyright (c) 2024 galax maintainers. All rights reserved.
+
+Test the package itself.
+"""
 
 import importlib.metadata
 
