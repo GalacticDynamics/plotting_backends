@@ -1,3 +1,4 @@
+# Copyright (c) 2024 galax maintainers. All rights reserved.
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["resvg-py"]
